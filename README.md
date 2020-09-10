@@ -2,6 +2,7 @@
 
 ## O que ele faz?
 -ainda em desenvolvimento...
+-Até o momento é possível adicionar itens ao carrinho, autenticar login
 
 
 (obviamente requer Node.js, ok? ...então prepare seu ambiente =D )
