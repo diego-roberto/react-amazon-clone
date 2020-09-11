@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import './Login.css';
 import { Link, useHistory } from 'react-router-dom';
-import { auth } from './firebase';
+import { auth, fDatabase } from './firebase';
 
 function Login() {
 
     const history = useHistory();
 
+    //const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -17,7 +18,7 @@ function Login() {
         .signInWithEmailAndPassword(email, password)
         .then(auth => {
             history.push('/')
-        })
+        })        
         .catch(error => alert(error.message))
     }
 
@@ -25,15 +26,26 @@ function Login() {
         e.preventDefault();        
 
         auth
-        .createUserWithEmailAndPassword(email, password)
+        .createUserWithEmailAndPassword(email, password)                
         .then((auth) => {
             console.log(auth);
                 if (auth){
+                    //writeUserData()
                     history.push('/')
                 }
-            })
+            })        
         .catch(error => alert(error.message))
     }
+
+    //TODO: pegar nome do user e exibir no Header ao invés do email! 
+
+    // function writeUserData(userId, name, email) {
+    //     fDatabase
+    //     .ref('users/' + userId).set({
+    //         username: name,
+    //         email: email
+    //     });
+    // }
 
     return (
         <div className='login'>
@@ -50,6 +62,11 @@ function Login() {
                 <h1>Sign In</h1>
                 
                 <form>
+                    {/* 
+                    <h5>Name</h5>
+                    <input type='text'value={name} onChange={e => setName(e.target.value)}/>                    
+                    */}
+
                     <h5>Email</h5>
                     <input type='text'value={email} onChange={e => setEmail(e.target.value)}/>
 
@@ -60,7 +77,7 @@ function Login() {
                 </form>
 
                 <p>
-                    blablabla conditions & shit
+                    blablabla conditions & BS
                 </p>
 
                 <button className='login__registerButton' onClick={register}>Create your Account</button>

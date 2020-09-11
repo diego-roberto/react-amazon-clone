@@ -13,6 +13,8 @@ const reducer = (state, action) => {
     console.log(action); //verificar ação no console do developer tools do browser | TODO: remover isto depois...
 
     switch(action.type) {
+        //ações para os eventos que o reducer está observando
+
         case "ADD_TO_BASKET":
             return {                
                 ...state,                               //qualquer que seja o estado
@@ -38,6 +40,12 @@ const reducer = (state, action) => {
                 ...state,
                 basket: newBasket
             }  
+
+        case 'EMPTY_BASKET':
+            return {
+                ...state,
+                basket: []
+            }
                 
         case "SET_USER":
             return{

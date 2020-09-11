@@ -15,5 +15,8 @@ const firebaseConfig = {
 
   const db = firebaseApp.firestore();
   const auth = firebase.auth();
+
+  const fDatabase = firebase.database(); //para salvar o username na conta autenticada no firebase - EM TESTE
+                                        /* https://firebase.google.com/docs/database/web/read-and-write */
   
-  export { db, auth };
+  export { db, auth, fDatabase };
