@@ -1,4 +1,4 @@
-# Este é um projeto em React para estudos onde imita a interface estilizada para parecer o Amazon.com, utilizando Firebase e Stripe.
+# Este é um projeto em React para estudos onde imita a interface estilizada para parecer o Amazon.com, utilizando serviços do Firebase e Stripe.
 
 ## O que ele faz?
 Ainda em desenvolvimento... até o momento é possível:
