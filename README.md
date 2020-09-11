@@ -2,14 +2,15 @@
 
 ## O que ele faz?
 Ainda em desenvolvimento... até o momento é possível:
->autenticar login utilizando o firebase authentication
->adicionar/remover itens ao carrinho, alterando quantidade e valor subtotal das props da basket
->UI responsiva com flex layout, estilizada e com navegabilidade por rotas
->acessar hitórico de pedidos (orders) de transações realizadas
->transação com cartão de crédito após o deploy e configuração da conta do Stripe
+- autenticar login utilizando o firebase authentication
+- adicionar/remover itens ao carrinho, alterando quantidade e valor subtotal das props da basket
+- UI responsiva com flex layout, estilizada e com navegabilidade por rotas
+- acessar hitórico de pedidos (orders) de transações realizadas
+- transação com cartão de crédito após o deploy e configuração da conta do Stripe
 
-
-![Screenshot](Screenshot_React Amazon Clone.png)
+<p align="center">
+  <img width="460" height="300" src="Screenshot_React Amazon Clone.png">
+</p>
 
 (obviamente requer Node.js, ok? ...então prepare seu ambiente =D )
 
